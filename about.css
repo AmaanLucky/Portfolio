@@ -1,0 +1,257 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    background: #000000;
+    color: #fff;
+}
+
+/* Header Styles */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    font-weight: 600;
+}
+.navbar a:hover{
+    color: rgb(248, 133, 3);
+}
+
+/* Home Section Styles */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.home-content {
+    background: transparent;
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5;
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: center; /* Align items horizontally (optional) */
+    align-items: center;     /* Align items vertically (optional) */
+    gap: 10px; 
+}
+
+.home-content h3 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    color: rgb(248, 133, 3);
+}
+
+.home-content p {
+    font-size: 17px;
+    margin: 20px 0 40px;
+    background: transparent;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+.btw-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btw-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+.btw-box a:hover {
+    background: rgb(248, 133, 3);
+    color: black;
+}
+/* About Section Styles */
+.about-section {
+    background: #000;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+.about-content h1{
+    padding-bottom: 10px;
+}
+/* Quote Section Styles */
+
+/* Keyframe animation for slide-in effect */
+@keyframes slide-in {
+    from {
+        transform: translateY(20px); /* Start below the view */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* Fade in */
+    }
+}
+
+/* Quote Section Styles */
+.quote-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(248, 133, 3, 0.1); /* Light background */
+    border-left: 4px solid rgb(248, 133, 3); /* Highlight border */
+    font-style: italic; /* Italic text for emphasis */
+    text-align: center; /* Center the quote */
+    transition: transform 0.8s, box-shadow 0.s; /* Smooth transition for hover effects */
+    border-radius: 8px; /* Rounded corners */
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Start below */
+}
+
+/* Hover effect */
+.quote-section:hover {
+    transform: translateY(-5px); /* Slightly lift the quote on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+}
+
+blockquote {
+    margin: 0;
+    font-size: 24px; /* Adjust font size */
+    line-height: 1.5; /* Better line spacing */
+    color: #ffffff; /* Quote text color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(248, 133, 3, 0.6); /* 3D effect */
+}
+
+
+/* Profile Image Styles */
+.profile-image {
+    flex: 1;
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.hover-image{
+    width: 100%; 
+    height: auto;
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+.hover-image:hover{
+    opacity:1;
+}
+
+/* Introduction Styles */
+.about-intro {
+    flex: 2;
+}
+.about-intro h1{
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(248, 133, 3);
+}
+
+.about-intro p {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.highlight {
+    color: rgb(248, 133, 3);
+    font-weight: 300;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+
+/* Contact Section Styles */
+.contact {
+    
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+    padding-top: 50px;
+    background: black;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+}
+.contact h2{
+    color: rgb(248, 133, 3) ;
+    font-weight: 400px;
+    font-size: 30px;
+}
+.contact p{
+    font-size: 17px;
+}
+
+.contact-link {
+    
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: rgb(248, 133, 3);
+}
