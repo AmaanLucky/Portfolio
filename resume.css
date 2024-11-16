@@ -12,24 +12,32 @@ body {
   overflow-x: hidden;
 }
 
-.header{
-  position: absolute;
+.header {
+  position:fixed ;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: transparent;
+  background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
 }
-.logo{
+
+.logo {
   font-size: 30px;
   color: white;
   text-decoration: none;
   font-weight: 600;
 }
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .navbar a {
   font-size: 18px;
   color: white;
@@ -39,20 +47,22 @@ body {
   transition: .3s;
   font-weight: 600;
 }
-.navbar a:hover{
+
+.navbar a:hover {
   color: rgb(248, 133, 3);
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 110px auto 50px;
 }
 
 .resume-section h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: rgb(255, 255, 255); /* white */
+  color: rgb(255, 255, 255);
   animation: fadeInUp 1.2s ease-in-out;
+  text-align: center;
 }
 
 .resume-section h3 {
@@ -104,87 +114,113 @@ ul li {
   transform: scale(1.1);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 .view-resume-btn {
   display: inline-block;
-  padding: 15px 30px; /* Adjust padding for a better look */
+  padding: 15px 30px;
   margin-left: 35%;
-  margin-top: 60px; /* Add margin for spacing */
-  background-color: rgb(248, 133, 3); /* Button background color */
-  color: #000; /* Button text color */
-  text-decoration: none; /* Remove underline */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 18px; /* Font size */
-  font-weight: bold; /* Bold text */
-  text-align: center; /* Center text */
-  transition: background 0.3s, transform 0.3s; /* Animation */
+  margin-top: 60px;
+  background-color: rgb(248, 133, 3);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .view-resume-btn:hover {
-  background-color: #fff; /* Change background on hover */
-  color: rgb(248, 133, 3); /* Change text color on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #fff;
+  color: rgb(248, 133, 3);
+  transform: scale(1.05);
 }
+
 .down-resume-btn {
   display: inline-block;
-  padding: 15px 30px; /* Adjust padding for a better look */
+  padding: 15px 30px;
   margin-left: 20px;
-  margin-top: 60px; /* Add margin for spacing */
-  background-color: rgb(248, 133, 3); /* Button background color */
-  color: #000; /* Button text color */
-  text-decoration: none; /* Remove underline */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 18px; /* Font size */
-  font-weight: bold; /* Bold text */
-  text-align: center; /* Center text */
-  transition: background 0.3s, transform 0.3s; /* Animation */
+  margin-top: 60px;
+  background-color: rgb(248, 133, 3);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .down-resume-btn:hover {
-  background-color: #fff; /* Change background on hover */
-  color: rgb(248, 133, 3); /* Change text color on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #fff;
+  color: rgb(248, 133, 3);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 5%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .container {
+    width: 95%;
+    margin: 150px auto 20px;
+  }
+
+  .resume-section h2 {
+    font-size: 28px;
+  }
+
+  .resume-section h3 {
+    font-size: 20px;
+  }
+
+  .resume-section p,
+  .resume-section ul {
+    font-size: 14px;
+  }
+
+  .view-resume-btn, .down-resume-btn {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .resume-section h2 {
+    font-size: 24px;
+  }
+
+  .resume-section h3 {
+    font-size: 18px;
+  }
+
+  .resume-section p,
+  .resume-section ul {
+    font-size: 12px;
+  }
 }
