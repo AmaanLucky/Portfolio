@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contactstyles.css">
+    <script>
+        function handleSubmit(button) {
+            button.innerText = "Submitting..."; 
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerText = "Send Message"; 
+                button.disabled = false; 
+            }, 2000); 
+        }
+    </script>
+   
+</head>
+<body>
+
+    <header class="header">
+        <a href="https://drive.google.com/file/d/1P_Yu0ylxSVWCuhzEFna9M-VbMQcCf_K1/view?usp=sharing" class="logo">Amaan.</a>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="portfolio.html" target="_blank">Portfolio</a>
+            <a href="cont.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to get in touch with me via email or phone. You can also use the contact form below.</p>
+            
+            <div class="contact-info">
+                <p><strong>Email :</strong><a href="mailto:amaanahmed2405@gmail.com"> amaanahmed2405@gmail.com</a></p>
+                <p><strong>Phone :</strong><a href="tel:+919989583343"> +91 9989583343</a></p>
+            </div>
+
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(this.querySelector('button[type=submit]'));">
+                <input type="hidden" name="access_key" value="27c8799f-2675-4435-a595-b03a2fdcffd0">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name Loading..." required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="findme@ifyoucan.com" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your friendly digits !" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your epic saga..." rows="5" required></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Reset Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
