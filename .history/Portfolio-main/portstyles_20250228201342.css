@@ -1,0 +1,218 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    background: #000000;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+
+.animated{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: none;
+   
+}
+
+
+.header-content h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+    color: rgb(248, 133, 3);
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateX(-100px); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+        transform: translateX(0); /* End at original position */
+    }
+}
+
+/* Animation Class */
+.animated-header {
+    animation: slideIn 1.8s ease-out; /* Apply slide-in animation */
+}
+
+/* Portfolio Section Styles */
+.portfolio-section {
+    padding: 100px 10%;
+    text-align: center;
+    background: #000000;
+}
+
+.portfolio-section h2 {
+    margin-top: 70px;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.project-card {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #444;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+    color: rgb(248, 133, 3);
+}
+
+.project-card p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.project-card a {
+    margin-top: 15px;
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(248, 133, 3);
+    padding: 10px 20px;
+    border: 2px solid rgb(248, 133, 3);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: rgb(248, 133, 3);
+    color: #000;
+}
+
+/* Skills Section Styles */
+.skills-section {
+    padding: 5px 10%;
+    text-align: center;
+    background: #000000;
+    font-weight: 500;
+}
+
+.skills-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding-bottom: 30px ;
+}
+
+.skill a {
+    display: block; /* Make the anchor take up the full space */
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Text color */
+    padding: 15px; /* Button-like padding */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgb(248, 133, 3); /* Button background color */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animation effects */
+    border: 3px solid rgb(248, 133, 3);
+}
+
+.skill a:hover {
+    transform: translateY(-5px); /* Raise effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Shadow on hover */
+    background: black; /* Change background color on hover */
+    color: rgb(248, 133, 3); /* Change text color on hover */
+}
+
+.gen{
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .header-content p {
+        font-size: 1em;
+    }
+
+    .portfolio-section h2,
+    .skills-section h2 {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,139 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header-content {
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    color: rgb(248, 133, 3);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 80px 10%;
+    text-align: center;
+    background: #000;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: rgb(248, 133, 3);
+}
+
+.project-card p {
+    color: #ddd;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid rgb(248, 133, 3);
+    border-radius: 5px;
+    color: rgb(248, 133, 3);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project-card a:hover {
+    background: rgb(248, 133, 3);
+    color: #000;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 50px 10%;
+    text-align: center;
+    background: #000;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.skill a {
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    background: rgb(248, 133, 3);
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.skill a:hover {
+    background: #000;
+    color: rgb(248, 133, 3);
+    border: 2px solid rgb(248, 133, 3);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .header-content p {
+        font-size: 1em;
+    }
+
+    .portfolio-section h2, .skills-section h2 {
+        font-size: 2em;
+    }
+
+    .project-grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

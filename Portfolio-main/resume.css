@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.header {
+  position:fixed ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: rgb(248, 133, 3);
+}
+
+.container {
+  width: 90%;
+  margin: 110px auto 50px;
+}
+
+.resume-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+  animation: fadeInUp 1.2s ease-in-out;
+  text-align: center;
+}
+
+.resume-section h3 {
+  font-size: 24px;
+  color: rgb(248, 133, 3);
+  margin-bottom: 10px;
+  margin-top: 20px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.resume-section p,
+.resume-section ul {
+  font-size: 16px;
+  font-weight: 200;
+  color: #ccc;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 13px 0;
+}
+
+.resume-section strong {
+  color: white;
+}
+
+/* Buttons and Hover Effects */
+.resume-section a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  transition: 0.3s;
+  animation: fadeInUp 1.3s ease-in-out;
+}
+
+.resume-section a:hover {
+  background: rgb(248, 133, 3);
+  color: black;
+  transform: scale(1.1);
+}
+
+.view-resume-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-left: 35%;
+  margin-top: 60px;
+  background-color: rgb(248, 133, 3);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.view-resume-btn:hover {
+  background-color: #fff;
+  color: rgb(248, 133, 3);
+  transform: scale(1.05);
+}
+
+.down-resume-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-left: 20px;
+  margin-top: 60px;
+  background-color: rgb(248, 133, 3);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.down-resume-btn:hover {
+  background-color: #fff;
+  color: rgb(248, 133, 3);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 5%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .container {
+    width: 95%;
+    margin: 150px auto 20px;
+  }
+
+  .resume-section h2 {
+    font-size: 28px;
+  }
+
+  .resume-section h3 {
+    font-size: 20px;
+  }
+
+  .resume-section p,
+  .resume-section ul {
+    font-size: 14px;
+  }
+
+  .view-resume-btn, .down-resume-btn {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .resume-section h2 {
+    font-size: 24px;
+  }
+
+  .resume-section h3 {
+    font-size: 18px;
+  }
+
+  .resume-section p,
+  .resume-section ul {
+    font-size: 12px;
+  }
+}
